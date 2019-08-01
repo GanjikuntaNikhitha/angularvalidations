@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app = 'app'>
+
+<head>
+
+<script src= 'angular.js'></script>
+<script src="util.html"></script>
+</head>
+<body>
+        <h1> WELCOME TO STUCRED </h1>
+
+<!-- <form name="form">
+    <input type="text" name="emailphone" ng-model="email" ng-pattern="/^([a-z][a-zA-Z0-9_]*(\.[a-zA-Z][a-zA-Z0-9_]*)?@[a-z][a-zA-Z-0-9]*\.[a-z]+(\.[a-z]+)?)$/" >
+    <span ng-if="form.emailphone.$error.pattern">Enter correct email </span>
+</form> -->
+
+<form name="form">
+    <input type="text" name="phoneNumber" ng-model="PHONE" ng-pattern="/^([7-9][0-9]{9})?$/" />
+    <span ng-if="form.phoneNumber.$error.pattern">Enter correct phoneNumber </span>
+</form>
+
+
+
+
+
+<div ng-controller ='testController'>
+
+<button ng-click = "updatemessage()">MESSAGE</button>
+
+    <p> {{message}} </p>
+    <p ng-bind="message"></p>
+</div>
+</body>
+</html>
